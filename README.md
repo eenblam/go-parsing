@@ -8,10 +8,10 @@ It was my first stab at a lexer, so that file uses some of Rob's control flow fu
 
 I'm currently reading through:
 
-- Terence Parr's **Language Implementation Patterns**, which uses Java and ANTLR.
-- **Introduction to Automata Theory, Languages, and Computation**, by Hopcroft, Motwani, and Ullman. (3rd).
+- Terence Parr's *Language Implementation Patterns* (which uses Java and ANTLR.)
+- *Introduction to Automata Theory, Languages, and Computation* by Hopcroft, Motwani, and Ullman. (3rd).
 
-## Things to cover:
+## Things to cover
 
 - [x] Lexers
 - [ ] Parsers

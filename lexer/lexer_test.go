@@ -90,3 +90,14 @@ func TestLexTriplet(t *testing.T) {
     assertItemType(items, itemRightBracket, t)
     assertItemType(items, itemEOF, t)
 }
+
+func TestLexNestedList(t *testing.T) {
+    _, items := Lex("lex nested list", "[ [], a ]")
+    assertItemType(items, itemLeftBracket, t)
+    assertItemType(items, itemLeftBracket, t)
+    assertItemType(items, itemRightBracket, t)
+    assertItemType(items, itemComma, t)
+    assertItemType(items, itemSymbol, t)
+    assertItemType(items, itemRightBracket, t)
+    assertItemType(items, itemEOF, t)
+}

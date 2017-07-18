@@ -101,3 +101,12 @@ func TestLexNestedList(t *testing.T) {
     assertItemType(items, itemRightBracket, t)
     assertItemType(items, itemEOF, t)
 }
+
+func TestBrokenListsFail(t *testing.T) {
+    _, items := Lex("lex right open list", "[ a")
+    assertItemType(items, itemLeftBracket, t)
+    assertItemType(items, itemSymbol, t)
+    assertItemType(items, itemError, t)
+    _, items = Lex("lex unstarted list", "a ]")
+    assertItemType(items, itemError, t)
+}
